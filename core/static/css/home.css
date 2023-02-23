@@ -1,0 +1,554 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, u {
+    text-decoration: none;
+}
+
+body {
+
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    max-width: 1345px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.header__logo {
+    display: block;
+    /*background-image: url("../images/base/black_logo.svg");*/
+    background-image: url("../images/base/logo_color_footer.svg");
+    background-repeat: no-repeat;
+    width: 185px;
+    height: 63px;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+.header__slogan {
+    margin-left: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 69px;
+    /*lobster*/
+    font-family: 'Lobster', cursive;
+    /*color: #D21919;*/
+    z-index: 1;
+    transform: matrix(1, -0.05, 0.09, 1, 0, 0);
+    background: #121FCF;
+    background: linear-gradient(to right, #121FCF 18%, #FF08C5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.header__profile_btn {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 46px;
+    /*sofia_sans*/
+    font-family: 'Sofia Sans', sans-serif;
+
+    color: black;
+    text-align: center;
+    padding: 4px 55px 4px 26px;
+    display: inherit;
+    margin-left: auto;
+    margin-right: 10px;
+    z-index: 1;
+}
+
+.profile_label {
+
+}
+
+.profile_btn_img {
+    border-radius: 500px;
+    max-width: 51px;
+    max-height: 51px;
+    margin-right: 35px;
+}
+
+.profile_btn_ico {
+    margin-right: 35px;
+}
+
+
+/*___________________main_page__________________*/
+.main_page_background {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(68deg, rgba(255, 255, 255, 1) 60%, rgba(172, 133, 34, 1) 55%);
+    margin: 0 auto;
+    height: 1080px;
+}
+
+.main_container {
+    max-width: 1345px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main_page__text1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 69px;
+    letter-spacing: 0.02em;
+    color: #000000;
+    font-family: 'Lobster', cursive;
+    max-width: 570px;
+    display: inline-block;
+    position: absolute;
+    top: 249px;
+}
+
+.main_page__text2 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 73px;
+    letter-spacing: 0.02em;
+    mix-blend-mode: normal;
+    color: #000000;
+    position: relative;
+    display: inline-block;
+    bottom: -590px;
+    left: 10%;
+}
+
+.main_page__img_wrapper {
+    position: absolute;
+    top: 380px;
+    left: 650px;
+}
+
+.main-page__metr-img {
+    max-width: 100%;
+    min-width: 326px;
+    padding-right: 10px;
+
+}
+
+/*second_block*/
+.second_block__bg {
+    background-color: #373737;
+    height: 840px;
+    position: relative;
+}
+
+.second_block__large_selection, .second_block__scoring_points {
+    display: flex;
+    max-width: 815px;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 115px;
+    padding-right: 10px;
+}
+
+.second_block__scoring_points {
+    padding-top: 20px;
+    margin-left: 26%;
+}
+
+.large_selection__menu_ico {
+    min-width: 190px;
+}
+
+.large_selection__title, .scoring_points__title {
+    font-family: 'Lobster', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 50px;
+    color: #FFFFFF;
+    max-width: 526px;
+}
+
+.large_selection__desc, .scoring_points__desc {
+    font-family: 'Noto Sans Javanese', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 50px;
+    color: #FFFFFF;
+    max-width: 413px;
+    float: right;
+}
+
+.second_block__footer_wave {
+    background-image: url("../images/Vector 7 (1).svg");
+    height: 200px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    background-repeat-y: no-repeat;
+}
+
+
+/*_______________________footer_______________________*/
+
+footer {
+    background: #000;
+    height: 300px;
+    position: relative;
+}
+
+.footer_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.footer__buttons {
+    width: min-content;
+    padding: 0;
+    display: inline-block;
+}
+
+.footer__button {
+    font-family: 'Noto Sans Javanese', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #5295FF;
+    padding-top: 7px;
+    width: 100%;
+}
+
+.footer__buttons > li {
+    margin-top: 15px;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 312px;
+    height: 50px;
+    border-radius: 8px;
+    border: 2px solid white;
+    justify-content: space-around;
+}
+
+.footer__description {
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 33px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+
+    max-width: 370px;
+    display: inline-block;
+}
+
+.footer_logo_year {
+    position: absolute;
+    left: 88px;
+    margin-top: 22px;
+    font-family: 'Righteous', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.footer_logo_year > span {
+    margin-left: 8px;
+}
+
+
+@media (max-width: 980px) {
+    .header__slogan {
+        display: none;
+    }
+
+    /*.header__profile_btn {*/
+    /*    padding: 13px 71px 13px 30px;*/
+    /*    font-size: 55px;*/
+    /*    border: 3px solid #000000*/
+    /*}*/
+    /*.header__logo {*/
+    /*    width: 432px;*/
+    /*    height: 83px;*/
+    /*    background-size: 58%;*/
+    /*}*/
+    .main_page__text1 {
+        /*font-size: 82px;*/
+        /*max-width: 90%;*/
+        top: 171px;
+        /*text-align: center;*/
+    }
+
+    .main_page__text2 {
+        font-size: 44px;
+        bottom: -450px
+    }
+
+    .main_page__img_wrapper {
+        top: 560px;
+        left: 360px;
+    }
+
+    .main-page__metr-img {
+        max-width: 99%;
+    }
+
+    #scoring_points_wrapper {
+        /*padding-bottom: 95px;*/
+    }
+
+
+    .second_block__bg {
+        height: 1420px;
+    }
+
+    .second_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .second_block__scoring_points {
+        padding-top: 113px;
+        margin-left: 0;
+    }
+
+    .second_block__large_selection, .second_block__scoring_points {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: none;
+    }
+
+    .large_selection__desc, .scoring_points__desc {
+        float: none;
+        max-width: none;
+        font-size: 24px;
+        padding-top: 9px;
+    }
+
+    .large_selection__menu_ico {
+        width: 27%;
+    }
+
+    .second_block__scoring_points__ico {
+        width: 27%;
+        min-width: 190px;
+    }
+
+    .large_selection__title, .scoring_points__title {
+        max-width: 800px;
+        font-size: 52px;
+        margin-top: 31px;
+        line-height: 61px;
+    }
+
+
+    footer {
+        height: 465px;
+    }
+
+    .footer_container {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .footer__description {
+        text-align: center;
+        max-width: 650px;
+        font-size: 22px;
+    }
+
+    .footer__buttons {
+        margin-top: 36px;
+    }
+
+    /*Свойства кнопок футера, сейчас стоят стандартные, не увеличиваются при уменьшении*/
+    /*.footer__buttons {*/
+    /*    margin-top: 46px;*/
+    /*}*/
+    /*.footer__buttons > li {*/
+    /*    width: 410px;*/
+    /*    height: 63px;*/
+    /*    margin-top: 32px;*/
+    /*}*/
+    /*.footer__button {*/
+    /*    font-size: 21px;*/
+    /*}*/
+    .footer_logo_year {
+        font-size: 17px;
+        margin-top: 61px;
+        left: 0;
+        margin-left: 20px;
+    }
+
+    .footer_logo_year > img {
+        width: 130px;
+    }
+
+    .second_block__footer_wave {
+        background-position-x: 1296px;
+        height: 220px;
+    }
+
+}
+
+
+@media (max-width: 740px) {
+    .main_page__text1 {
+        top: 100px;
+    }
+
+    .main_page__text2 {
+        font-size: 28px;
+        bottom: -372px;
+    }
+
+    .main_page__img_wrapper {
+        top: 466px;
+        left: 164px;
+    }
+}
+
+@media (max-width: 560px) {
+    .header__profile_btn {
+        font-size: 28px;
+        padding: 3px 10px 3px 10px;
+    }
+
+    .profile_btn_ico {
+        margin-right: 8px;
+    }
+
+    .main_page__text1 {
+        font-size: 43px;
+        text-align: center;
+    }
+
+    .main_page__img_wrapper {
+        top: 466px;
+        left: 46px;
+    }
+
+    .large_selection__desc, .scoring_points__desc {
+        font-size: 21px;
+        padding-top: 0px;
+    }
+
+    .large_selection__title, .scoring_points__title {
+        max-width: 100%;
+        font-size: 39px;
+        margin-top: 16px;
+        line-height: 53px;
+    }
+
+    .footer__description {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 470px) {
+    .main_page__text1 {
+        font-size: 36px;
+    }
+
+    .main_page__text2 {
+        left: 2%;
+        font-size: 25px;
+        bottom: -371px;
+        line-height: 33px;
+        text-align: center;
+    }
+
+    .footer__description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 410px) {
+    .header__logo {
+        background-size: 100%;
+        width: 134px;
+        height: 50px;
+    }
+
+    .header__profile_btn {
+        font-size: 21px;
+        padding: 1px 5px 1px 5px;
+    }
+
+    .header__profile_btn > img {
+        width: 37px;
+    }
+
+    .main_page__img_wrapper {
+        left: 12px;
+    }
+
+    .large_selection__title, .scoring_points__title {
+        font-size: 31px;
+        margin-top: 15px;
+        line-height: 45px;
+    }
+    .large_selection__desc, .scoring_points__desc{
+        text-align: right;
+        font-size: 17px;
+        line-height: 23px;
+    }
+}
+
+@media (max-width: 366px) {
+    .main_page__text1 {
+        font-size: 31px;
+        line-height: 35px;
+    }
+
+    .main-page__metr-img {
+        min-width: 280px;
+    }
+
+    .footer__description {
+        font-size: 14px;
+    }
+
+    .footer__buttons {
+        width: 100%;
+    }
+
+    .footer__buttons > li {
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .footer__button {
+        font-size: 14px;
+    }
+}
+

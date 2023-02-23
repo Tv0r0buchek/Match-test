@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign_up</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}">
+    <link rel="icon" href="{% static 'icons/keys.png' %}">
+    <meta name="viewport" content="width=device-width; initial-scale=1">
+
+    {# Poppins #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    {# noto sans #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+
+
+    {# russo one #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="limiter">
+    <div class="login_container">
+        <div class="login_wrapper">
+            <span class="logo">
+                <a href="">
+                    <img src="{% static 'images/footer_logo.svg' %}" alt="">
+                </a>
+            </span>
+
+            <form action="" class="login__form" method="post">
+
+                <div class="form_field_container" style="margin-bottom: 22px">
+                    <input type="email" required placeholder="Введите электронную почту"  name="email" class="form_input login_input">
+                </div>
+
+                <div class="form_field_container">
+                    <input type="text" required placeholder="Придумайте никнейм" name="nickname" class="form_input nickname_input">
+                </div>
+
+                <div class="form_field_container">
+                    <input type="password" required placeholder="Придумайте пароль" name="password1" class="form_input password_input">
+                </div>
+
+                <div class="form_field_container">
+                    <input type="password" required placeholder="Повторите пароль" name="password2" class="form_input password_input">
+                </div>
+
+                <div class="enter_btn_wrapper">
+                    <input type="submit" value="Регистрация" class="enter_btn">
+                </div>
+
+            </form>
+
+            <div class="not_registered_yet">
+                <a href="" class="not_registered_btn">Есть аккаунт?</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

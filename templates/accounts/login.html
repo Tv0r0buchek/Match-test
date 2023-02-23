@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}">
+    <link rel="icon" href="{% static 'icons/keys.png' %}">
+    <meta name="viewport" content="width=device-width; initial-scale=1">
+
+    {# Poppins #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    {# noto sans #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+
+
+    {# russo one #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="limiter">
+    <div class="login_container">
+        <div class="login_wrapper">
+        <span class="logo">
+            <a href="">
+                <img src="{% static 'images/footer_logo.svg' %}" alt="">
+            </a>
+        </span> {# ссылка #}
+            <form action="" class="login__form" method="post">
+
+                <div class="form_field_container" style="margin-bottom: 22px">
+                    <input type="text" required placeholder="Введите ваш логин или электронную почту" name="login" class="form_input login_input">
+                </div>
+
+                <div class="form_field_container">
+                    <input type="password" required placeholder="Введите ваш пароль" name="password" class="form_input password_input">
+                </div>
+
+                <div class="forgot_password_btn">
+                    <a href="">Забыли пароль?</a> {# ссылка #}
+                </div>
+
+                <div class="enter_btn_wrapper">
+                    <input type="submit" value="Войти" class="enter_btn">
+                </div>
+            </form>
+
+            <div class="not_registered_yet">
+                <a href="" class="not_registered_btn">Нет аккаунта?</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous"></script>
+<script src="{% static 'js/login.js' %}"></script>
+</body>
+</html>

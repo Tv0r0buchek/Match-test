@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}">
+    <link rel="icon" href="{% static 'icons/keys.png' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {#sofia_sans#}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap" rel="stylesheet">
+
+    {#нормальный лобстер, для текста на главной странице#}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    {#Noto Sans Japanese#}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    {#Righteous#}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+
+{% block content %}
+
+{% endblock %}
+{#<div class="second_block__footer_wave">#}
+{##}
+{#    </div>#}
+
+<footer>
+    <div class="main_container footer_container">
+        <ul class="footer__buttons">
+            <li><a class="footer__button" href="">Техподдержка</a></li>
+            <li><a class="footer__button" href="">Пользовательское соглашение</a></li>
+            <li><a class="footer__button" href="">Обработка персональных данных</a></li>
+        </ul>
+        <p class="footer__description">Данный сайт позволяет проверить себя в решении задач и примеров на скорость, а чтобы было интереснее - зови
+            друзей!</p>
+
+    </div>
+    <div class="footer_logo_year">
+        <img src="{% static 'images/base/logo_color_footer.svg' %}" alt="">
+        <span>2023-2023</span>
+    </div>
+
+</footer>
+
+</body>
+</html>
