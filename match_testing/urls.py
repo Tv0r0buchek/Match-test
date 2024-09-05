@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from accounts import account_urls
+from accounts.views import ProfileDetailView, ProfileSettingsDetailView
 from core.views import *
 from match_testing import settings
 from django.conf.urls.static import static
@@ -24,6 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include(account_urls)),
     path("", HomeView.as_view(), name="home"),
-    path("base/", ShowBase.as_view(), name="base")
-]
+    path("<str:slug>/", ProfileDetailView.as_view(), name='profile'),
+    path("<str:slug>/settings/", ProfileSettingsDetailView.as_view(), name='profile_settings'),
+    # добавить эту страницу в будущем
+    # path("<str:slug>/settings/safety", ProfileSettingsDetailView.as_view(), name='safety_settings'),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

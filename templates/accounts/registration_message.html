@@ -29,41 +29,21 @@
     <div class="login_container">
         <div class="login_wrapper">
         <span class="logo">
-            <a href="{% url 'home' %}">
+            <a href="">
                 <img src="{% static 'images/footer_logo.svg' %}" alt="">
             </a>
-        </span> {# ссылка #}
-            <form action="" class="login__form" method="POST" id='login_form'>
-                {% csrf_token %}
-                {{ form.non_field_errors }}
-                {% if form.error_messages.invalid_login %}
-                    <p>{{ form.error_messages.invalid_login }}</p>
-                {% endif %}
-                <div class="form_field_container" id="login_form__username" style="margin-bottom: 22px">
-                    {{ form.username }}
-                </div>
-                {{ form.username.error_messages }}
-                <div class="form_field_container" id="login_form__password">
-                    {{ form.password }}
-                </div>
-                {{ form.password.errors }}
-                <div class="forgot_password_btn" id="login_form__forgot_password">
-                    <a href="{% url 'password_reset' %}">Забыли пароль?</a> {# ссылка #}
-                </div>
-
-                <div class="enter_btn_wrapper" id="login_form__enter_btn">
-                    <input type="submit" value="Войти" class="enter_btn">
-                </div>
-            </form>
-
-            <div class="not_registered_yet">
-                <a href="{% url 'sign_up' %}" class="not_registered_btn">Нет аккаунта?</a>
+        </span>
+            <div class="message_container">
+                <span>{{ message }}</span>
             </div>
+
         </div>
     </div>
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous"></script>
 <script src="{% static 'js/login.js' %}"></script>
 </body>
 </html>

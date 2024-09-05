@@ -1,0 +1,384 @@
+body {
+    background-color: #F6F6F6;
+}
+
+.profile_card {
+    margin-top: 38px;
+    background: white;
+    box-shadow: 0 0 66px 10px #00000024;
+    border-radius: 8px;
+    margin-bottom: 35px;
+    min-height: 530px;
+    padding: 21px 10px 0 10px;
+}
+
+.card__nickname_role_wrapper {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.card__user_nickname {
+    margin-left: 80px;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 98px;
+    letter-spacing: 0.02em;
+    height: 63px;
+}
+
+.card__avtar_description_wrapper {
+    margin-left: 50px;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.card__user_role {
+    position: absolute;
+    top: -10px;
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #9C3B3B;
+    left: 1172px;
+    letter-spacing: 0.02em;
+}
+
+.card__avtar {
+    width: 100%;
+    max-height: 279px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+}
+
+.card__description {
+    text-align: center;
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.6);
+    max-width: 374px;
+    letter-spacing: 0.02em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card__divider {
+    display: flex;
+}
+
+.card_right_container_table__btn {
+    margin-left: auto;
+    margin-right: auto;
+    width: 57%;
+}
+
+.card__characteristics {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 86px;
+    margin-bottom: 84px;
+    gap: 20px;
+    white-space: nowrap;
+}
+
+.card__characteristics__wrapper {
+    text-align: center;
+    line-height: 26px;
+}
+
+.card__characteristics__title {
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: rgba(100, 99, 99, 0.86);
+}
+
+.card__characteristics__info {
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+}
+
+.card__add_to_friend_btn {
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #87D5C6;
+    border-radius: 50px;
+    border: none;
+    height: 60px;
+    width: 244px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 7px;
+    cursor: pointer;
+    transition: background 250ms linear;
+}
+
+.card__add_to_friend_btn:hover {
+    background: rgba(0, 185, 255, 0.79);
+}
+
+.test_section__friends_section__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+}
+
+/*_______________________________Пройденные_тесты_______________________________*/
+
+.passed_tests {
+    margin-right: 30px;
+    max-width: 673px;
+    width: 100%;
+    min-height: 515px;
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 33px 5px #00000033;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.passed_tests__header {
+    margin-top: 20px;
+    margin-bottom: 22px;
+    text-align: center;
+    height: 70px;
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 73px;
+    letter-spacing: 0.02em;
+}
+
+.passed_tests__test_item_block {
+    background-color: #F9F9F9;
+    border-radius: 14px;
+    padding-top: 9px;
+    margin-bottom: 20px;
+}
+
+.test_block__date {
+    margin-left: 21px;
+    font-family: Noto Sans Javanese, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #B62020;
+}
+
+.test_block__head-scores-time {
+    margin-left: 65px;
+}
+
+.passed_tests__test_name {
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.test_block__score_txt, .test_block__time_txt {
+    color: #797979;
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.test_block__score_value {
+    color: #AF0BCA;
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.test_block__time_value {
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.passed_tests__another_tests_btn {
+    color: #F22525;
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 49px;
+    letter-spacing: 0.02em;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/*_______________________________Друзья_______________________________*/
+
+.friends {
+    background: white;
+    max-width: 612px;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 17px;
+    border-radius: 14px;
+    box-shadow: 0 4px 33px 5px #00000033;
+    min-height: 400px;
+}
+
+.friends__heading {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 22px;
+    height: 70px;
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 73px;
+}
+
+.friend_item {
+    background-color: #F9F9F9;
+    display: flex;
+    margin-bottom: 31px;
+    border-radius: 14px;
+}
+
+.friend_item__img {
+    margin-right: 50px;
+    height: 85px;
+}
+
+.friend_item__user_name {
+    font-family: 'Noto Sans Javanese', sans-serif;
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 49px;
+    word-break: break-all;
+}
+
+
+.second_block__footer_wave {
+    position: initial;
+}
+
+/*_______________________________MEDIA_______________________________*/
+
+@media (max-width: 1350px) {
+    .card__user_role {
+        left: 12px;
+    }
+}
+
+@media (max-width: 1090px) {
+    .card__characteristics__title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 890px) {
+    .card__user_nickname {
+        text-align: center;
+        margin: 0;
+    }
+
+    .card__add_to_friend_btn {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .card__divider {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .card__avtar_description_wrapper {
+        margin: 0 0 30px 0;
+    }
+
+    .card__characteristics {
+        margin-bottom: 46px;
+    }
+
+    .card_right_container_table__btn {
+        width: 100%;
+    }
+
+    .card__characteristics__wrapper {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0%;
+    }
+
+    .test_section__friends_section__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .passed_tests {
+        margin-right: 0;
+        margin-bottom: 35px;
+        max-width: initial;
+    }
+
+    .friends {
+        max-width: initial;
+    }
+
+}
+
+@media (max-width: 625px) {
+    .card__user_nickname {
+        font-size: 37px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card__characteristics {
+        flex-direction: column;
+    }
+
+    .card__user_nickname {
+        font-size: 30px;
+    }
+
+    .passed_tests__header, .friends__heading {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 370px) {
+    .card__user_nickname {
+        font-size: 26px;
+    }
+
+    .card__user_role {
+        font-size: 14px;
+    }
+
+    .passed_tests__header, .friends__heading {
+        font-size: 24px;
+    }
+}

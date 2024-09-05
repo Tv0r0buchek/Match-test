@@ -1,6 +1,118 @@
 {% extends "core/base.html" %}
+{% load static %}
 
 
 {% block content %}
+    <link rel="stylesheet" href="{% static 'css/profile_page_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/errors_modal_style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {#    noto sans Javanese#}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Javanese:wght@700&display=swap" rel="stylesheet">
+
+    <div class="main_container">
+        <section class="profile_card">
+            <div class="card__nickname_role_wrapper">
+                <span class="card__user_role">{{ user_data.role }}</span>
+                <h2 class="card__user_nickname">{{ user_data.username }}</h2>
+
+            </div>
+            <div class="card__divider">
+                <div class="card__avtar_description_wrapper">
+                    {% if user_data.avatar %}
+                        <img class="card__avtar" src="{{ user_data.avatar.url }}" alt="Нет картинки при аватарке">
+                    {% else %}
+                        <img class="card__avtar" src="{% static 'images/base/avatar_is_not_find.jpg' %}" alt="Нет картинки">
+                    {% endif %}
+                    <p class="card__description">{{ user_data.description }}
+                    </p>
+                </div>
+                <div class="card_right_container_table__btn">
+                    <div class="card__characteristics">
+                        <div class="card__characteristics__wrapper">
+                            <div class="card__characteristics__title">зарегистрирован</div>
+                            <div class="card__characteristics__info">{{ user_data.date_of_registration }}</div>
+                        </div>
+
+                        <div class="card__characteristics__wrapper">
+                            <div class="card__characteristics__title">пройдено тестов</div>
+                            <div class="card__characteristics__info">{{ user_data.number_of_completed_tests }}</div>
+                        </div>
+
+                        <div class="card__characteristics__wrapper">
+                            <div class="card__characteristics__title">класс</div>
+                            <div class="card__characteristics__info">{{ user_data.teaching_class }}</div>
+                        </div>
+                    </div>
+                    {% if current_user %}
+                        <button class="card__add_to_friend_btn">
+                            Добавить в друзья
+                        </button>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+        <div class="test_section__friends_section__wrapper">
+            <section class="passed_tests">
+                <h3 class="passed_tests__header">Пройденные тесты</h3>
+                <div class="passed_tests__test_item_block">
+                    <span class="test_block__date">22.03.2022</span>
+                    <div class="test_block__head-scores-time">
+                        <p class="passed_tests__test_name">Решение задач на тему “векторы”</p>
+                        <span class="test_block__score_txt">баллы:</span> <span class="test_block__score_value">30/50</span><br>
+                        <span class="test_block__time_txt">время:</span> <span class="test_block__time_value">125мин 30сек</span>
+                    </div>
+                </div>
+                <div class="passed_tests__test_item_block">
+                    <span class="test_block__date">22.03.2022</span>
+                    <div class="test_block__head-scores-time">
+                        <p class="passed_tests__test_name">Решение задач на тему “векторы”</p>
+                        <span class="test_block__score_txt">баллы:</span> <span class="test_block__score_value">30/50</span><br>
+                        <span class="test_block__time_txt">время:</span> <span class="test_block__time_value">125мин 30сек</span>
+                    </div>
+                </div>
+                <div class="passed_tests__test_item_block">
+                    <span class="test_block__date">22.03.2022</span>
+                    <div class="test_block__head-scores-time">
+                        <p class="passed_tests__test_name">Решение задач на тему “векторы”</p>
+                        <span class="test_block__score_txt">баллы:</span> <span class="test_block__score_value">30/50</span><br>
+                        <span class="test_block__time_txt">время:</span> <span class="test_block__time_value">125мин 30сек</span>
+                    </div>
+                </div>
+                <div class="passed_tests__test_item_block">
+                    <span class="test_block__date">22.03.2022</span>
+                    <div class="test_block__head-scores-time">
+                        <p class="passed_tests__test_name">Решение задач на тему “векторы”</p>
+                        <span class="test_block__score_txt">баллы:</span> <span class="test_block__score_value">30/50</span><br>
+                        <span class="test_block__time_txt">время:</span> <span class="test_block__time_value">125мин 30сек</span>
+                    </div>
+                </div>
+                <div class="passed_tests__another_tests_btn">
+                    <a href="">Все пройденные тесты</a>
+                </div>
+            </section>
+            <section class="friends">
+                <h3 class="friends__heading">Друзья</h3>
+                <div class="friend_item">
+                    <img src="{% static 'images/profile_page/аватар.png' %}" alt="" class="friend_item__img">
+                    <span class="friend_item__user_name">Тв0р0бушек</span>
+                </div>
+                <div class="friend_item">
+                    <img src="{% static 'images/profile_page/аватар.png' %}" alt="" class="friend_item__img">
+                    <span class="friend_item__user_name">ПетровичЪ</span>
+                </div>
+                <div class="friend_item">
+                    <img src="{% static 'images/profile_page/аватар.png' %}" alt="" class="friend_item__img">
+                    <span class="friend_item__user_name">Каламалык</span>
+                </div>
+                <div class="friend_item">
+                    <img src="{% static 'images/profile_page/аватар.png' %}" alt="" class="friend_item__img">
+                    <span class="friend_item__user_name">Димазавр</span>
+                </div>
+            </section>
+        </div>
+
+    </div>
 
 {% endblock %}

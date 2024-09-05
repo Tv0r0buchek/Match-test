@@ -1,0 +1,79 @@
+.statuscode_error_modal {
+    width: 430px;
+    height: 54px;
+    position: absolute;
+    /*top: 39px;*/
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    background: #D63333;
+    border-radius: 12px;
+    justify-content: space-evenly;
+    top: -100px;
+    padding-right: 8px;
+    padding-left: 8px;
+    z-index: 9999;
+}
+
+.showError {
+    animation: slideDown 1s forwards, slideUp 1s 5s forwards;
+}
+
+.statuscode_error_modal_text {
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+}
+
+@keyframes slideDown {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 39px;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        top: 39px;
+    }
+    100% {
+        top: -100px;
+    }
+}
+
+/*Экран ошибок имени пользователя*/
+
+.text_errors_modal {
+    min-width: 400px;
+    min-height: 54px;
+    height: max-content;
+    width: max-content;
+    position: absolute;
+    /*top: 39px;*/
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    background: #D63333;
+    border-radius: 12px;
+    justify-content: space-evenly;
+    top: -100px;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.text_error_label {
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    margin-right: 10px;
+}

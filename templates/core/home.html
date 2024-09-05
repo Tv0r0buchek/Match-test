@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="{% static "css/home.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/errors_modal_style.css" %}">
     <link rel="icon" href="{% static 'icons/keys.png' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {#sofia_sans#}
@@ -35,14 +36,23 @@
         <h1 class="header__slogan">
             пора умнеть!
         </h1>
-        <a href="#" class="header__profile_btn">
+        <span style="font-size: 28px">
+            {% if user %}
+                {{ user }}
+            {% endif %}
+        </span>
+
+        <a href="" class="header__test_btn">
+            <span class="header__test_btn__label">Тесты</span>
+
+        </a>
+        <span class="header__profile_btn">
             {% if profile_img %}
                 <img src="{% static 'images/test_avatar.jpg' %}" alt="" class="profile_btn_img">
             {% else %}
                 <img src="{% static 'images/profile_icon.svg' %}" alt="" class="profile_btn_ico">
             {% endif %}
-            <span class="profile_label">профиль</span>
-        </a>
+        </span>
     </div>
     <div class="main_container">
         <h1 class="main_page__text1">Приходи и соревнуйся с друзьями!</h1>
@@ -73,6 +83,27 @@
 
     </div>
 </div>
+
+<div class="modal_background">
+    <div class="modal_rectangle">
+        <div class="modal_button_wrapper modal_btn_1">
+            <a href="{% url 'login' %}">Войти</a>
+        </div>
+        <div class="modal_button_wrapper modal_btn_2">
+            <a href="{% url 'sign_up' %}">Регистрация</a>
+        </div>
+    </div>
+</div>
+<div class="statuscode_error_modal">
+    <span class="statuscode_error_modal_text">Ошибка, попробуйте позже, код</span>
+    <img src="{% static 'images/profile_settings/cross_icon.svg' %}" alt="">
+</div>
+
+<div class="text_errors_modal">
+    <span class="text_error_label"></span>
+    <img src="{% static 'images/profile_settings/cross_icon.svg' %}" alt="">
+</div>
+
 <footer>
     <div class="main_container footer_container">
         <ul class="footer__buttons">
@@ -90,6 +121,11 @@
     </div>
 
 </footer>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+        crossorigin="anonymous"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/home.js' %}" ></script>
+<script src="{% static 'js/authorization_dialog.js' %}"></script>
 
 </body>
 </html>

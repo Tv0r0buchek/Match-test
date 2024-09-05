@@ -1,0 +1,119 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/user_settings.css' %}">
+    <link rel="stylesheet" href="{% static 'css/errors_modal_style.css' %}">
+
+    {#    noto sans Javanese#}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Javanese:wght@700&display=swap" rel="stylesheet">
+
+    {#    Plus Jakarta Sans#}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Plus+Jakarta+Sans:wght@800&display=swap" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+    <section class="main_container">
+        <div class="container__content_sidebar">
+            <div class="profile_main_card">
+                <div class="profile_main_card__head">
+                    <span class="profile_main_card_role_label">Профиль</span>
+                    <span class="profile_main_card_role">{{ user_data.role }}</span>
+                </div>
+                <div class="profile_main_card_border_container">
+                    <div class="profile_main_card__img_container">
+                        {% if user_data.avatar %}
+                            <img src="{{ user_data.avatar.url }}" alt="" class="avatar">
+                        {% else %}
+                            <img src="{% static 'images/base/avatar_is_not_find.jpg' %}" alt="" class="avatar">
+                        {% endif %}
+                        <img src="{% static 'images/profile_settings/camera_ico.png' %}" class="profile_main_card__camera_ico" alt="">
+                    </div>
+
+                <input class="profile_main_card_img_input editable" id="img_input" type="file" hidden accept="image/png, image/gif, image/jpeg, image/*">
+
+                    <div class="profile_main_card__username_wrapper">
+                        <span class="username_label">никнейм</span>
+                        <span id="nickname" class="profile_main_card_username editable">{{ user_data.username }}</span>
+                        <button class="change_username_btn" id="changeButton"> Изменить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar_container">
+                <div class="sidebar_label_wrapper" id="sidebar_label_wrapper1">
+                    <span>Профиль</span>
+                </div>
+                <div class="sidebar_label_wrapper" id="sidebar_label_wrapper2">
+                    <span>Безопасность</span>
+                </div>
+            </div>
+        </div>
+        <div class="profile_settings_menu">
+            <div class="setting_row_holder">
+                <label for="profile_description_textarea" class="setting_row-label">Краткая информация:</label>
+                <textarea name="" class="profile_description_textarea editable" id="profile_description_textarea">
+                    {{ user_data.description }}
+                </textarea>
+            </div>
+            <div class="setting_row_holder">
+                <label for="profile_select_class" class="setting_row-label">Клас обучения:</label>
+                <select name="" id="profile_select_class" class="profile_select_class editable">
+                    <option value="0" {% if user_data.teaching_class == 0 %} selected {% endif %}>нет</option>
+                    <option value="1" {% if user_data.teaching_class == 1 %} selected {% endif %}>1</option>
+                    <option value="2" {% if user_data.teaching_class == 2 %} selected {% endif %}>2</option>
+                    <option value="3" {% if user_data.teaching_class == 3 %} selected {% endif %}>3</option>
+                    <option value="4" {% if user_data.teaching_class == 4 %} selected {% endif %}>4</option>
+                    <option value="5" {% if user_data.teaching_class == 5 %} selected {% endif %}>5</option>
+                    <option value="6" {% if user_data.teaching_class == 6 %} selected {% endif %}>6</option>
+                    <option value="7" {% if user_data.teaching_class == 7 %} selected {% endif %}>7</option>
+                    <option value="8" {% if user_data.teaching_class == 8 %} selected {% endif %}>8</option>
+                    <option value="9" {% if user_data.teaching_class == 9 %} selected {% endif %}>9</option>
+                    <option value="10" {% if user_data.teaching_class == 10 %} selected {% endif %}>10</option>
+                    <option value="11" {% if user_data.teaching_class == 11 %} selected {% endif %}>11</option>
+                </select>
+            </div>
+            <div class="setting_row_holder">
+                <label for="profile_select_class" class="setting_row-label">Отображать тесты:</label>
+                <select name="" id="show_tests_selection" class="show_tests_selection editable">
+                    <option value="1" {% if user_data.show_tests %} selected {% endif %}>Да</option>
+                    <option value="0" {% if not user_data.show_tests %} selected {% endif %}>Нет</option>
+                </select>
+            </div>
+            <div class="save_changes_btn_container" style="display: none">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="gooey">
+                            <!-- in="sourceGraphic" -->
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"></feGaussianBlur>
+                            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                                           result="highContrastGraphic"></feColorMatrix>
+                            <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop"></feComposite>
+                        </filter>
+                    </defs>
+                </svg>
+                <button id="gooey-button">
+                    Сохранить
+                    <span class="bubbles">
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'js/profile_settings.js' %}"></script>
+
+{% endblock %}

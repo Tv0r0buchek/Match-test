@@ -1,5 +1,7 @@
 from django.contrib import admin
-from accounts.models import *
+from django.contrib.auth import get_user_model
+# from django.contrib.auth.admin import UserAdmin as BaseUserAdmin Если нужно переделать админку
 
-admin.site.register(Profile)
 
+User = get_user_model()
+admin.site.register(User)

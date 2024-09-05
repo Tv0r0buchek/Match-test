@@ -5,18 +5,9 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/errors_modal_style.css" %}">
     <link rel="icon" href="{% static 'icons/keys.png' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    {#sofia_sans#}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap" rel="stylesheet">
-
-    {#нормальный лобстер, для текста на главной странице#}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
     {#Noto Sans Japanese#}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,15 +18,104 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    {#lora#}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+
+    {#inter#}
+    {#    Сообщение об ошибках#}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+
+    {% block head %}{% endblock %}
+
 </head>
 <body>
+<header>
+    <div class="header__container">
+        <a href="{% url 'home' %}" class="header__logo"></a>
+        <nav>
+            <a href="" class="header__navigation__link link_contacts">контакты</a>
+            <a href="" class="header__navigation__link">о проекте</a>
+        </nav>
+
+        <button class="header__avatar_wrapper__button">
+            {% if user_data.avatar %}
+                <img src="{{ user_data.avatar.url }}" alt="" class="header__avatar__img">
+            {% else %}
+                <img src="{% static 'images/base/avatar_is_not_find.jpg' %}" alt="" class="header__avatar__img">
+            {% endif %}
+            <img class="header__avatar_wrapper__pointer" src="{% static 'icons/pointer_down.svg' %}" alt="">
+        </button>
+    </div>
+    <div class="header__modal">
+        <div class="header__modal__to_profile_BTN">
+            {% if user_data.avatar %}
+                <img src="{{ user_data.avatar.url }}" alt="" class="header__avatar__img">
+            {% else %}
+                <img src="{% static 'images/base/test_avatar.png' %}" alt="" class="header__avatar__img header__modal_image">
+            {% endif %}
+            <span class="header__modal__to_profile_BTN__username">{{ user_data.username }}</span>
+            <img src="{% static 'icons/right_arrow.svg' %}" class="header__modal__to_profile_BTN__right_arrow" alt="">
+        </div>
+        <div class="header__modal__link">
+            <img src="{% static 'icons/settings_icon.svg' %}" class="header__modal__link__ico" alt="">
+            <span class="header__modal__link__text">Настройки</span>
+        </div>
+        <div class="header__modal__link">
+            <a href="{% url 'logout' %}"><img src="{% static 'icons/exit_ico.svg' %}" class="header__modal__link__ico" alt="">
+                <span class="header__modal__link__text">Выйти</span>
+            </a>
+
+        </div>
+        <div class="header__modal__link" id="header__modal__link__hidden">
+            <img src="" class="header__modal__link__ico">
+            <span class="header__modal__link__text">Контакты</span>
+        </div>
+        <div class="header__modal__link" id="header__modal__link__hidden">
+            <img src="" class="header__modal__link__ico">
+            <span class="header__modal__link__text">О проекте</span>
+        </div>
+    </div>
+</header>
+
+<div class="statuscode_error_modal">
+    <span class="statuscode_error_modal_text">Ошибка, попробуйте позже, код</span>
+    <img src="{% static 'images/profile_settings/cross_icon.svg' %}" alt="">
+</div>
+
+<div class="text_errors_modal">
+    <span class="text_error_label"></span>
+    <img src="{% static 'images/profile_settings/cross_icon.svg' %}" alt="">
+</div>
+
+<div class="modal_background">
+    <div class="modal_rectangle">
+        <div class="modal_button_wrapper modal_btn_1">
+            <a href="{% url 'login' %}">Войти</a>
+        </div>
+        <div class="modal_button_wrapper modal_btn_2">
+            <a href="{% url 'sign_up' %}">Регистрация</a>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+        crossorigin="anonymous"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/authorization_dialog.js' %}"></script>
+<script src="{% static 'js/header.js' %}"></script>
 
 {% block content %}
-
 {% endblock %}
+
 {#<div class="second_block__footer_wave">#}
-{##}
-{#    </div>#}
+{#        TODO НЕ ЗАБЫТЬ ВЕРНУТЬ ВОЛНУ#}
+{#</div>#}
 
 <footer>
     <div class="main_container footer_container">
@@ -46,13 +126,11 @@
         </ul>
         <p class="footer__description">Данный сайт позволяет проверить себя в решении задач и примеров на скорость, а чтобы было интереснее - зови
             друзей!</p>
-
     </div>
     <div class="footer_logo_year">
         <img src="{% static 'images/base/logo_color_footer.svg' %}" alt="">
         <span>2023-2023</span>
     </div>
-
 </footer>
 
 </body>

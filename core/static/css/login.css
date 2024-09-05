@@ -105,7 +105,14 @@ html, body {
     background-repeat: no-repeat;
     background-size: 28px;
 }
-.nickname_input{
+.code_input{
+    text-transform: uppercase;
+
+}
+.code_input::placeholder{
+    text-transform: lowercase;
+}
+.nickname_input {
     background-image: url("../images/login/name_ico.png");
     background-position-y: center;
     background-position-x: 10px;
@@ -194,6 +201,24 @@ html, body {
 
 .not_registered_btn:hover::after {
     width: 100%;
+}
+
+.errorlist {
+    margin-top: 5px;
+    list-style-type: none;
+    font-size: 20px;
+    font-family: 'Poppins-Medium', serif;
+    color: red;
+}
+.errorlist > li{
+    margin-bottom: 10px;
+}
+
+/*для registration_message*/
+.message_container {
+    margin-top: 150px;
+    text-align: center;
+    font-family: Noto Sans JP, sans-serif;
 }
 
 

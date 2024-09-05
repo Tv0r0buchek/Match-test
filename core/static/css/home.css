@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+a {
+    color: initial;
+
+}
+
 a, u {
     text-decoration: none;
 }
@@ -12,6 +17,27 @@ a, u {
 body {
 
 }
+
+/*scroll*/
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #c622be;
+    /*background-color: #4f8742;*/
+}
+
 
 .header__container {
     display: flex;
@@ -47,7 +73,21 @@ body {
     background: linear-gradient(to right, #121FCF 18%, #FF08C5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
 
+.header__test_btn {
+    border-radius: 8px;
+    border: 1px solid #000;
+    padding: 6px 12px 6px 12px;
+    margin-left: auto;
+    margin-right: 31px;
+}
+
+.header__test_btn__label {
+    font-family: 'Lobster', cursive;
+    color: black;
+    font-size: 37px;
+    line-height: 45px;
 }
 
 .header__profile_btn {
@@ -62,26 +102,18 @@ body {
 
     color: black;
     text-align: center;
-    padding: 4px 55px 4px 26px;
+    padding: 4px 12px 4px 12px;
     display: inherit;
-    margin-left: auto;
     margin-right: 10px;
+    cursor: pointer;
     z-index: 1;
-}
-
-.profile_label {
-
 }
 
 .profile_btn_img {
     border-radius: 500px;
     max-width: 51px;
     max-height: 51px;
-    margin-right: 35px;
-}
-
-.profile_btn_ico {
-    margin-right: 35px;
+    /*margin-right: 35px;*/
 }
 
 
@@ -281,27 +313,69 @@ footer {
     margin-left: 8px;
 }
 
+/*/__________modal_________/*/
+.modal_background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.44);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modal_rectangle {
+    max-width: 937px;
+    max-height: 324px;
+    width: 100%;
+    height: 100%;
+    border: #FFFFFF 1px solid;
+    background-color: #00000070;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 10px 0 10px;
+
+}
+
+.modal_button_wrapper {
+    border-radius: 20px;
+    max-width: 284px;
+    max-height: 67px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #000;
+    font-family: Lobster, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 67px;
+}
+.modal_button_wrapper > a{
+    display: block;
+}
+
+.modal_btn_1 {
+    background-color: #9FFF7D;
+}
+
+.modal_btn_2 {
+    background-color: #FDFF9B;
+}
 
 @media (max-width: 980px) {
     .header__slogan {
         display: none;
     }
 
-    /*.header__profile_btn {*/
-    /*    padding: 13px 71px 13px 30px;*/
-    /*    font-size: 55px;*/
-    /*    border: 3px solid #000000*/
-    /*}*/
-    /*.header__logo {*/
-    /*    width: 432px;*/
-    /*    height: 83px;*/
-    /*    background-size: 58%;*/
-    /*}*/
     .main_page__text1 {
-        /*font-size: 82px;*/
-        /*max-width: 90%;*/
         top: 171px;
-        /*text-align: center;*/
     }
 
     .main_page__text2 {
@@ -317,11 +391,6 @@ footer {
     .main-page__metr-img {
         max-width: 99%;
     }
-
-    #scoring_points_wrapper {
-        /*padding-bottom: 95px;*/
-    }
-
 
     .second_block__bg {
         height: 1420px;
@@ -371,7 +440,7 @@ footer {
 
 
     footer {
-        height: 465px;
+        height: 500px;
     }
 
     .footer_container {
@@ -390,18 +459,6 @@ footer {
         margin-top: 36px;
     }
 
-    /*Свойства кнопок футера, сейчас стоят стандартные, не увеличиваются при уменьшении*/
-    /*.footer__buttons {*/
-    /*    margin-top: 46px;*/
-    /*}*/
-    /*.footer__buttons > li {*/
-    /*    width: 410px;*/
-    /*    height: 63px;*/
-    /*    margin-top: 32px;*/
-    /*}*/
-    /*.footer__button {*/
-    /*    font-size: 21px;*/
-    /*}*/
     .footer_logo_year {
         font-size: 17px;
         margin-top: 61px;
@@ -437,14 +494,17 @@ footer {
     }
 }
 
+@media (max-width: 670px) {
+    .modal_rectangle {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
 @media (max-width: 560px) {
     .header__profile_btn {
         font-size: 28px;
         padding: 3px 10px 3px 10px;
-    }
-
-    .profile_btn_ico {
-        margin-right: 8px;
     }
 
     .main_page__text1 {
@@ -459,7 +519,7 @@ footer {
 
     .large_selection__desc, .scoring_points__desc {
         font-size: 21px;
-        padding-top: 0px;
+        padding-top: 0;
     }
 
     .large_selection__title, .scoring_points__title {
@@ -492,18 +552,21 @@ footer {
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 420px) {
     .header__logo {
         background-size: 100%;
         width: 134px;
         height: 50px;
     }
 
-    .header__profile_btn {
-        font-size: 21px;
+    .header__profile_btn, .header__test_btn {
         padding: 1px 5px 1px 5px;
     }
 
+    .header__test_btn__label {
+        font-size: 30px;
+        line-height: 37px;
+    }
     .header__profile_btn > img {
         width: 37px;
     }
@@ -517,7 +580,8 @@ footer {
         margin-top: 15px;
         line-height: 45px;
     }
-    .large_selection__desc, .scoring_points__desc{
+
+    .large_selection__desc, .scoring_points__desc {
         text-align: right;
         font-size: 17px;
         line-height: 23px;

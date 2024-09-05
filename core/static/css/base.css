@@ -1,3 +1,6 @@
+/*header_container*/
+/*main_container*/
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +9,11 @@
 
 a, u {
     text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .main_container {
@@ -15,6 +23,157 @@ a, u {
     padding-left: 15px;
     padding-right: 15px;
 }
+
+/*_______________________header_______________________*/
+
+header {
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+    margin-bottom: 38px;
+    white-space: nowrap;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    max-width: 1345px;
+    margin: 0 auto;
+    height: 73px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header__logo {
+    background-image: url("../images/base/logo_color_footer.svg");
+    width: 182px;
+    height: 62px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+nav {
+    margin-left: auto;
+    margin-right: 116px;
+}
+
+.header__navigation__link {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: black;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 33px;
+}
+
+.link_contacts {
+    margin-right: 59px;
+}
+
+
+.header__avatar__img {
+    width: 80px;
+    height: 51px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-left: 3px;
+
+}
+
+.header__avatar_wrapper__pointer {
+    padding-left: 5px;
+}
+
+.header__avatar_wrapper__button {
+    display: flex;
+    padding-left: 15px;
+    padding-right: 10px;
+    align-items: center;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.header__avatar_wrapper__button:hover {
+    cursor: pointer;
+    background: #d6d6d6;
+}
+
+/*_______________________Header_modal_______________________*/
+
+.header__modal {
+    position: absolute;
+    display: none;
+    left: 1315px;
+    top: 83px;
+    width: 297px;
+    min-height: 210px;
+    background-color: #F4F4F4;
+    border: 1px solid #00000033;
+    box-shadow: 0 0 11px 1px #0000001C;
+    border-radius: 8px;
+    z-index: 1;
+    padding-top: 25px;
+    padding-left: 29px;
+    padding-right: 7px;
+}
+
+.header__modal__to_profile_BTN {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 2px #00000030;
+    width: 261px;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.header__modal__to_profile_BTN__username {
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 33px;
+    color: #000000;
+    white-space: nowrap; /* Текст не переносится */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+}
+
+.header__modal_image {
+    margin-left: 5px;
+    margin-right: 7px;
+}
+
+.header__modal__link {
+    margin-bottom: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header__modal__link__text {
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+.header__modal__link__ico {
+    margin-right: 8px;
+}
+
+#header__modal__link__hidden {
+    display: none;
+}
+
+/*_______________________волна_______________________*/
 
 .second_block__footer_wave {
     background-image: url("../images/Vector 7 (1).svg");
@@ -43,21 +202,21 @@ footer {
 }
 
 .footer__buttons {
-    width: 293px;
+    width: min-content;
     padding: 0;
     display: inline-block;
 }
 
 .footer__button {
-    font-family: 'Noto Sans Javanese', serif;
-    font-style: normal;
+    font-family: 'Noto Sans Javanese', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 33px;
     text-align: center;
     letter-spacing: 0.02em;
     color: #5295FF;
     padding-top: 7px;
+    width: 100%;
 }
 
 .footer__buttons > li {
@@ -66,7 +225,7 @@ footer {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    width: 310px;
+    width: 312px;
     height: 50px;
     border-radius: 8px;
     border: 2px solid white;
@@ -81,7 +240,7 @@ footer {
     line-height: 33px;
     letter-spacing: 0.02em;
     color: #FFFFFF;
-
+    margin-top: 10px;
     max-width: 370px;
     display: inline-block;
 }
@@ -104,51 +263,156 @@ footer {
 .footer_logo_year > span {
     margin-left: 8px;
 }
+/*Модальное окно регистрация или авторизация*/
+.modal_background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.44);
+    display: none;
+    align-items: center;
+    justify-content: center;
 
-@media (max-width: 1100px) {
+}
+
+.modal_rectangle {
+    max-width: 937px;
+    max-height: 324px;
+    width: 100%;
+    height: 100%;
+    border: #FFFFFF 1px solid;
+    background-color: #00000070;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 10px 0 10px;
+
+}
+
+.modal_button_wrapper {
+    border-radius: 20px;
+    max-width: 284px;
+    max-height: 67px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #000;
+    font-family: Lobster, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 67px;
+}
+.modal_button_wrapper > a{
+    display: block;
+}
+
+.modal_btn_1 {
+    background-color: #9FFF7D;
+}
+
+.modal_btn_2 {
+    background-color: #FDFF9B;
+}
+
+
+@media (max-width: 980px) {
     footer {
-        height: 800px;
+        height: 500px;
     }
 
     .footer_container {
         flex-direction: column-reverse;
         align-items: center;
-        padding-top: 40px;
+        padding-top: 10px;
     }
 
     .footer__description {
         text-align: center;
-        max-width: 880px;
-        font-size: 35px;
+        max-width: 650px;
+        font-size: 22px;
     }
 
     .footer__buttons {
-        margin-top: 70px;
-        max-width: 500px;
-        width: 100%;
-    }
-
-    .footer__buttons > li {
-        width: 550px;
-        height: 80px;
-        margin-top: 40px;
-    }
-
-    .footer__button {
-        font-size: 32px;
+        margin-top: 36px;
     }
 
     .footer_logo_year {
-        font-size: 30px;
-        margin-top: 115px;
+        font-size: 17px;
+        margin-top: 61px;
+        left: 0;
+        margin-left: 20px;
     }
 
     .footer_logo_year > img {
-        width: 260px;
+        width: 130px;
     }
 
     .second_block__footer_wave {
         background-position-x: 1296px;
         height: 220px;
+    }
+}
+
+@media (max-width: 890px) {
+    .header__container > nav {
+        margin-right: 25px;
+    }
+
+    .header__logo {
+        max-width: 182px;
+        width: 100%;
+    }
+
+    .link_contacts {
+        margin-right: 40px;
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 560px) {
+    .footer__description {
+        font-size: 18px;
+    }
+
+    .header__container > nav {
+        display: none;
+    }
+
+    .header__container {
+        justify-content: space-between;
+    }
+
+    #header__modal__link__hidden {
+        display: block;
+    }
+}
+
+@media (max-width: 470px) {
+    .footer__description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 366px) {
+    .footer__description {
+        font-size: 14px;
+    }
+
+    .footer__buttons {
+        width: 100%;
+    }
+
+    .footer__buttons > li {
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .footer__button {
+        font-size: 14px;
     }
 }

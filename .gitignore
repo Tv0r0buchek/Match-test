@@ -1,10 +1,9 @@
 accounts/migrations/
 core/migrations/
 match_testing/settings.py/
-/.idea/match-test.iml
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/inspectionProfiles/profiles_settings.xml
-/.idea/vcs.xml
-/.idea/webResources.xml
+/.idea/
+/avatars/
+/django.log/
+/match_testing/secret_data.py/
+/media/
+venv/

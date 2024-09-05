@@ -1,10 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User
+from match_testing.settings import AUTH_USER_MODEL
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.conf import settings
 
 
 class Test(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE)
     displayed = models.BooleanField(default=False)  # будет ли виден вопрос на главной странице
     is_active = models.BooleanField(default=False)  # будет ли тест доступным для прохождения
     time_to_complete_in_seconds = models.IntegerField(validators=[MinValueValidator(10), MaxValueValidator(36000)])
@@ -57,7 +58,7 @@ class PassedTest(models.Model):
     """
         Пройденные пользователем тесты
     """
-    user_connected = models.ForeignKey(User, on_delete=models.CASCADE)
+    user_connected = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE)
     connected_test = models.ForeignKey(Test, on_delete=models.CASCADE)
     scores = models.IntegerField()  # баллы, которые получены при прохождении теста
     date_of_passage = models.DateTimeField(auto_now_add=True)  # дата прохождения

@@ -1,0 +1,618 @@
+body {
+    background-color: #F6F6F6;
+}
+
+.container__content_sidebar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+}
+
+
+/*Главная карточка профиля*/
+.profile_main_card {
+    min-width: 863px;
+    min-height: 502px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: -10px 0 66px 10px rgba(0, 0, 0, 0.14);
+    margin-right: 10px;
+
+}
+
+.profile_main_card__head {
+    background-color: rgba(0, 0, 0, 0.63);
+    height: 56px;
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid #000;
+    padding: 0 13px 0 13px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 53px;
+}
+
+.profile_main_card_border_container {
+    padding: 0 23px 20px 23px;
+    width: 100%;
+    min-height: 79%;
+}
+
+.profile_main_card_role_label {
+    color: #F3F3F3;
+    font-family: 'Lora', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+
+}
+
+.profile_main_card_role {
+    font-family: 'Lora', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #A9CD43;
+    font-size: 16px;
+}
+
+.profile_main_card__img_container {
+    max-width: 394px;
+    max-height: 245px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 92px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: brightness(0.4);
+    max-height: 240px
+}
+
+.profile_main_card__camera_ico {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    transition: 1s;
+}
+
+.profile_main_card__img_container:hover {
+    cursor: pointer;
+}
+
+.profile_main_card__img_container:hover .profile_main_card__camera_ico {
+    filter: invert(10%) sepia(43%) saturate(3207%) hue-rotate(362deg) brightness(100%) contrast(106%);
+}
+
+.profile_main_card__username_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    word-break: break-all;
+    align-items: center;
+}
+
+.username_label {
+    color: #646363;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Noto Sans Javanese', sans-serif;
+    margin-right: 10px;
+}
+
+.profile_main_card_username {
+    color: #000;
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-weight: 700;
+    border: none;
+    max-width: 260px;
+    text-align: center;
+    border-radius: 9px;
+    width: 100%;
+}
+
+.change_username_btn {
+    color: #2D81E0;
+    font-family: 'Noto Sans Javanese', sans-serif;
+    font-weight: 700;
+    background: inherit;
+    border: none;
+}
+
+.profile_main_card_username > input {
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    width: fit-content;
+}
+
+.change_username_btn:hover{
+    cursor: pointer;
+}
+
+
+/*_______Сайдбар_______*/
+.sidebar_container {
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 15px 0 66px 10px rgba(0, 0, 0, 0.12);
+    max-width: 377px;
+    width: 100%;
+
+    padding: 10px;
+}
+
+.sidebar_label_wrapper {
+    height: 46px;
+    border-radius: 12px;
+
+    font-family: 'Noto Sans Javanese', sans-serif;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 11px;
+    padding-left: 14px;
+}
+
+.sidebar_label_wrapper_active {
+    background: #F3F3F3;
+}
+
+.sidebar_label_wrapper > span {
+    line-height: 53px;
+}
+
+/*Профиль, нижний блок настроек*/
+
+.profile_settings_menu {
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: -10px 0 66px 10px rgba(0, 0, 0, 0.14);
+    width: 863px;
+    /*height: 402px;*/
+    min-height: 440px;
+    padding-top: 19px;
+    padding-right: 57px;
+    padding-bottom: 19px;
+}
+
+.setting_row_holder {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start;
+    margin-bottom: 23px;
+}
+
+.setting_row-label {
+    margin-right: 26px;
+    color: #000;
+    text-align: right;
+    font-family: Noto Sans Javanese, sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.profile_description_textarea {
+    color: #666;
+    text-align: center;
+    font-family: Noto Sans Javanese, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px; /* 112.5% */
+    width: 447px;
+    height: 82px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    background: #D9D9D9;
+    white-space: pre-wrap;
+    resize: none;
+    vertical-align: middle;
+    padding-top: 15px;
+    overflow: hidden;
+}
+
+.profile_select_class, .show_tests_selection {
+    width: 447px;
+    height: 31px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    background: #D9D9D9;
+    color: #000;
+    text-align: center;
+    font-family: Noto Sans Javanese, sans-serif;
+    font-size: 18px;
+}
+
+
+/*____________________КНОПКА 'СОХРАНИТЬ'____________________*/
+
+.save_changes_btn_container {
+    /*  display:none  in HTML*/
+    justify-content: flex-end;
+    margin-top: 36px;
+
+}
+
+svg {
+    position: absolute;
+    top: -4000px;
+    left: -4000px;
+}
+
+#gooey-button {
+    padding: 14px;
+    font-size: 28px;
+    font-weight: 600;
+    border: none;
+    color: #0c1016;
+    filter: url(#gooey);
+    position: relative;
+    background-color: #00FF80;
+    cursor: pointer;
+}
+
+#gooey-button:focus {
+    outline: none;
+}
+
+#gooey-button .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#gooey-button .bubbles .bubble {
+    background-color: #00FF80;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -1;
+}
+
+#gooey-button .bubbles .bubble:nth-child(1) {
+    left: 101px;
+    width: 25px;
+    height: 25px;
+    animation: move-1 3.02s infinite;
+    animation-delay: 0.2s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(2) {
+    left: 107px;
+    width: 25px;
+    height: 25px;
+    animation: move-2 3.04s infinite;
+    animation-delay: 0.4s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(3) {
+    left: 118px;
+    width: 25px;
+    height: 25px;
+    animation: move-3 3.06s infinite;
+    animation-delay: 0.6s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(4) {
+    left: 72px;
+    width: 25px;
+    height: 25px;
+    animation: move-4 3.08s infinite;
+    animation-delay: 0.8s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(5) {
+    left: 75px;
+    width: 25px;
+    height: 25px;
+    animation: move-5 3.1s infinite;
+    animation-delay: 1s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(6) {
+    left: 76px;
+    width: 25px;
+    height: 25px;
+    animation: move-6 3.12s infinite;
+    animation-delay: 1.2s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(7) {
+    left: 109px;
+    width: 25px;
+    height: 25px;
+    animation: move-7 3.14s infinite;
+    animation-delay: 1.4s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(8) {
+    left: 98px;
+    width: 25px;
+    height: 25px;
+    animation: move-8 3.16s infinite;
+    animation-delay: 1.6s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(9) {
+    left: 126px;
+    width: 25px;
+    height: 25px;
+    animation: move-9 3.18s infinite;
+    animation-delay: 1.8s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(10) {
+    left: 53px;
+    width: 45px;
+    height: 25px;
+    animation: move-10 3.2s infinite;
+    animation-delay: 2s;
+}
+
+@keyframes move-1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    99% {
+        transform: translate(0, -106px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes move-2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    99% {
+        transform: translate(0, -91px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes move-3 {
+    0% {
+        transform: translate(0, 0);
+    }
+    99% {
+        transform: translate(0, -88px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes move-4 {
+    0% {
+        transform: translate(0, 0);
+    }
+    99% {
+        transform: translate(0, -100px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes move-5 {
+    0% {
+        transform: translate(0, 0);
+    }
+    99% {
+        transform: translate(0, -58px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes move-6 {
+    0% {
+        transform: translate(0, 0);
+    }
+    99% {
+        transform: translate(0, -91px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes move-7 {
+    0% {
+        transform: translate(0, 0);
+    }
+    99% {
+        transform: translate(0, -57px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes move-8 {
+    0% {
+        transform: translate(0, 0);
+    }
+    99% {
+        transform: translate(0, -56px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes move-9 {
+    0% {
+        transform: translate(0, 0);
+    }
+    99% {
+        transform: translate(0, -88px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes move-10 {
+    0% {
+        transform: translate(0, 0);
+    }
+    99% {
+        transform: translate(0, -65px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+/*media запросы*/
+
+@media (max-width: 1200px) {
+
+    .sidebar_container {
+        min-width: 297px;
+        width: auto;
+    }
+
+    .profile_settings_menu {
+        width: calc(100% - 297px - 10px);
+    }
+
+    .profile_main_card {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1110px) {
+    .setting_row_holder {
+        flex-direction: column;
+        align-items: flex-end;
+        align-content: normal;
+    }
+
+    .profile_settings_menu {
+        padding-right: 37px;
+        padding-left: 20px;
+    }
+
+    .setting_row-label {
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 980px) {
+    .container__content_sidebar {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .sidebar_container {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 15px;
+    }
+
+    .profile_settings_menu {
+        width: auto;
+    }
+
+    .setting_row-label {
+        margin-right: 26px;
+    }
+
+    .setting_row_holder {
+        flex-direction: row;
+        align-content: center;
+        align-items: flex-start;
+    }
+
+    .profile_select_class, .profile_description_textarea, .show_tests_selection {
+        width: 60%;
+        min-width: 475px;
+
+    }
+
+    .profile_description_textarea {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+@media (max-width: 795px) {
+    .setting_row-label {
+        margin-right: auto;
+    }
+
+    .setting_row_holder {
+        flex-direction: column;
+        align-items: flex-end;
+        align-content: normal;
+    }
+
+    .profile_settings_menu {
+        padding-right: 23px;
+        padding-left: 23px;
+        height: auto;
+
+    }
+}
+
+@media (max-width: 550px) {
+    .profile_description_textarea {
+        font-size: 16px;
+        min-height: 100px;
+    }
+
+    .profile_select_class, .profile_description_textarea, .show_tests_selection {
+        min-width: 100%;
+    }
+
+    .profile_main_card__username_wrapper {
+        flex-direction: column;
+    }
+
+    .profile_main_card__img_container {
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .username_label {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 535px) {
+
+}
